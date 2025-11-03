@@ -36,16 +36,6 @@ void insertAtKey(Node* &head, int val, int pos) {
     temp->next = new_node;
 }
 
-void updateAtPosition(Node* &head,int k,int val){
-    Node* temp = head;
-    int curr_pos=0;
-    while(curr_pos!=k){
-        temp=temp->next;
-        curr_pos++;
-    }
-    temp->val = val;
-}
-
 void display(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
@@ -68,9 +58,6 @@ int main() {
 
     insertAtKey(head, 4, 1);
     display(head);
-
-    updateAtPosition(head,2,5);
-     display(head);
 
     return 0;
 }
