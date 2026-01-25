@@ -56,7 +56,7 @@ void removeKthNodeFromEnd(Node* &head,int k){
     if (ptr2==NULL){//k is equal to length of linked list.
         Node* temp = head;
         head = head->next;
-        free(head);
+        free(temp);
         return;
     }
     //now ptr2 is k steps ahad of ptr1
@@ -79,7 +79,7 @@ int main(){
     ll.insertAtTail(5);
     ll.insertAtTail(6);
     ll.display();
-    removeKthNodeFromEnd(ll.head,3);
+    removeKthNodeFromEnd(ll.head,6);
     ll.display();
 
     return 0;
